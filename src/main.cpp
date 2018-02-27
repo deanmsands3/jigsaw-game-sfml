@@ -5,7 +5,7 @@
 
 int main()
 {
-    
+    std::cout << "Hello world! Desktop test 1"
     
     return 0;
 }
