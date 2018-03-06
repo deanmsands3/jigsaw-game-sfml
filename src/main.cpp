@@ -84,7 +84,7 @@ public:
         subTextSize = 10;
         
         menuTitleText = "Jigsaw Time!";
-        menuHintText = "Hi! Welcome to Jigsaw Time! There is lots of Adventure time jigsaw puzzle fun to be had!";
+        menuHintText = "Hi! Welcome to Jigsaw Time! There is lots of awesome landscape jigsaw puzzle fun to be had!";
         menuExitButtonWordText = "Quit"; 
         
         textColor = sf::Color::Black;
@@ -104,11 +104,11 @@ public:
         menuHint.setString(menuHintText);
         menuExitButtonWord.setString(menuExitButtonWordText);
         
-        image1;
-        image2;
-        image3;
-        image4;
-        image5;
+        image1.loadFromFile(../img/landscape1.jpg);
+        image2.loadFromFile(../img/landscape2.jpg);
+        image3.loadFromFile(../img/landscape3.jpg);
+        image4.loadFromFile(../img/landscape4.jpg);
+        image5.loadFromFile(../img/landscape5.jpg);
         
         choiceImage1;
         choiceImage2;
