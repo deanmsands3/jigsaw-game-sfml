@@ -119,19 +119,19 @@ public:
         titleRect.setFillColor(buttonColor1);
         buttonRect.setFillColor(buttonColor2);
         
-        choiceImage1Pos;
-        choiceImage2Pos;
-        choiceImage3Pos;
-        choiceImage4Pos;
-        choiceImage5Pos;
-        menuTitlePos;
-        menuHintPos;
-        menuExitButtonWord1Pos;
-        titleRectPos;
-        buttonRectPos;
-        menuWindowLocation;
+        choiceImage1Pos = (sf::Vector2f(0, 0));
+        choiceImage2Pos = (sf::Vector2f(0, 0));
+        choiceImage3Pos = (sf::Vector2f(0, 0));
+        choiceImage4Pos = (sf::Vector2f(0, 0));
+        choiceImage5Pos = (sf::Vector2f(0, 0));
+        menuTitlePos = (sf::Vector2f(0, 0));
+        menuHintPos = (sf::Vector2f(0, 0));
+        menuExitButtonWord1Pos = (sf::Vector2f(0, 0));
+        titleRectPos = (sf::Vector2f(0, 0));
+        buttonRectPos = (sf::Vector2f(0, 0));
+        menuWindowLocation = (sf::Vector2f(0, 0));
         
-        menuWindowSize;
+        menuWindowSize = (sf::Vector2f(0, 0));
         
     }
     const int 
