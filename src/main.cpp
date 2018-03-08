@@ -110,14 +110,14 @@ public:
         image4.loadFromFile(../img/landscape4.jpg);
         image5.loadFromFile(../img/landscape5.jpg);
         
-        choiceImage1;
-        choiceImage2;
-        choiceImage3;
-        choiceImage4;
-        choiceImage5;
+        choiceImage1.setTexture(image1);
+        choiceImage2.setTexture(image2);
+        choiceImage3.setTexture(image3);
+        choiceImage4.setTexture(image4);
+        choiceImage5.setTexture(image5);
         
-        titleRect;
-        buttonRect;
+        titleRect.setFillColor(buttonColor1);
+        buttonRect.setFillColor(buttonColor2);
         
         choiceImage1Pos;
         choiceImage2Pos;
