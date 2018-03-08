@@ -140,7 +140,7 @@ public:
 class Jigsaw: public menu
 {
     
-public:
+private:
     
     sf::RenderWindow jigsawWindow;
     
@@ -199,7 +199,7 @@ public:
     std::vector <std::vector <std::string> > gamePieces;
     std::vector <std::vector <std::string> > temp;   
      
-private:
+public:
     
     
     
