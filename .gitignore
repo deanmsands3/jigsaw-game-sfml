@@ -1,0 +1,9 @@
+*.o
+bin/
+obj/
+.project
+.cproject
+.settings/
+execution.log
+
+

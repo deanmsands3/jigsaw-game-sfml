@@ -1,0 +1,35 @@
+{
+	"assets":{
+		"land1":{"file":"img/landscape1.jpg"},
+		"land2":{"file":"img/landscape2.jpg"},
+		"land3":{"file":"img/landscape3.jpg"},
+		"land4":{"file":"img/landscape4.jpg"},
+		"land5":{"file":"img/landscape5.jpg"},
+		"Georgia":{"file":"fnt/Georgia.ttf"}
+	},
+	"textures":{
+		"Tland1":{"asset":"land1"},
+		"Tland2":{"asset":"land2"},
+		"Tland3":{"asset":"land3"},
+		"Tland4":{"asset":"land4"},
+		"Tland5":{"asset":"land5"}
+	},
+	"sprites":{
+		"Sland1":{"texture":"Tland1"},
+		"Sland2":{"texture":"Tland2"},
+		"Sland3":{"texture":"Tland3"},
+		"Sland4":{"texture":"Tland4"},
+		"Sland5":{"texture":"Tland5"}
+	},
+	"entities":{
+		"piece1":{"sprite":"Iland1"},
+		"piece2":{"sprite":"Iland2"},
+		"piece3":{"sprite":"Iland3"},
+		"piece4":{"sprite":"Iland4"},
+		"piece5":{"sprite":"Iland5"}
+	},
+	"fonts":{
+		"FGeorgia":{"asset":"Georgia"}
+	}
+	
+}

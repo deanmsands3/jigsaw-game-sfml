@@ -16,7 +16,6 @@ class GameWindowManager;
 class GameWindow {
    sf::RenderWindow _window;
     std::shared_ptr<GameWindowManager> _game_window_manager;
-    std::shared_ptr<AssetManager> _asset_manager;
     EntityManager _entity_manager;
     std::shared_ptr<GameWindow> _next_window;
 	bool _active;
@@ -31,8 +30,7 @@ public:
 	void push_entity(unsigned int id, const Entity  &entity);
 	GameWindow(std::shared_ptr<GameWindowManager> window_manager);
 	virtual ~GameWindow();
-	const std::shared_ptr<AssetManager>& getAssetManager() const;
-	void setAssetManager(const std::shared_ptr<AssetManager>& assetManager);
+	const std::shared_ptr<GameWindowManager>& getGameWindowManager() const;
 };
 
 class GameWindowManager{
@@ -41,6 +39,8 @@ class GameWindowManager{
 	unsigned _width;
 	unsigned _height;
 public:
+	GameWindowManager(const GameWindowManager *that);
+	GameWindowManager(const GameWindowManager &that);
 	GameWindowManager(std::shared_ptr<AssetManager> asset_manager);
 	virtual ~GameWindowManager();
 	void open_window(std::shared_ptr<GameWindow> new_game_window);
@@ -51,15 +51,9 @@ public:
 	const std::shared_ptr<AssetManager>& getAssetManager() const;
 	const std::shared_ptr<GameWindow>& getCurrentWindow() const;
 	void setCurrentWindow(const std::shared_ptr<GameWindow>& currentWindow);
-	sf::VideoMode getWindowSize() const;
 
-	unsigned getHeight() const {
-		return _height;
-	}
-
-	unsigned getWidth() const {
-		return _width;
-	}
+	unsigned getHeight() const;
+	unsigned getWidth() const;
 };
 
 

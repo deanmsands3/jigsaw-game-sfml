@@ -22,7 +22,6 @@ DATALIBS = -ljsoncpp
 LIBS =  $(SFMLLIBS) $(DATALIBS)
 LDFLAGS =  $(LIBS) -Wall 
 
-
 $(TARGET): $(OBJECTS)
 	@$(CXX) $(OBJECTS) $(LDFLAGS) -o $@ 
 	@echo "Linking complete!"

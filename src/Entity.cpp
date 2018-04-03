@@ -36,3 +36,15 @@ void Entity::setSprite(const sf::Sprite& sprite) {
 
 void Entity::update(float t) {
 }
+
+unsigned int Entity::getZOrder() const {
+	return _z_order;
+}
+
+void Entity::setZOrder(unsigned int order) {
+	_z_order = order;
+}
+
+void Entity::draw(sf::RenderWindow *render_window) {
+	render_window->draw(_sprite);
+}

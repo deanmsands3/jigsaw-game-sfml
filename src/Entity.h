@@ -14,6 +14,7 @@
 
 class Entity {
   unsigned int _id;
+  unsigned int _z_order;
   sf::Vector2f _position;
   sf::Sprite _sprite;
 public:
@@ -25,8 +26,9 @@ public:
 	const sf::Sprite& getSprite() const;
 	void setSprite(const sf::Sprite& sprite);
 	virtual void update(float t);
-	virtual void draw();
-
+	virtual void draw(sf::RenderWindow *render_window);
+	unsigned int getZOrder() const;
+	void setZOrder(unsigned int order);
 };
 
 

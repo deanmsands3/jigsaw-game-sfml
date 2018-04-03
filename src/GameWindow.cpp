@@ -10,8 +10,7 @@
 //Game Window member functions
 GameWindow::GameWindow(std::shared_ptr<GameWindowManager> window_manager):
 	_game_window_manager(window_manager),
-	_asset_manager(window_manager->getAssetManager()),
-	_entity_manager(_asset_manager),
+	_entity_manager(window_manager->getAssetManager()),
 	_next_window(NULL),
 	_active(false){
 	_preload();
@@ -105,16 +104,33 @@ const std::shared_ptr<GameWindow>& GameWindowManager::getCurrentWindow() const {
 	return _current_window;
 }
 
+GameWindowManager::GameWindowManager(const GameWindowManager& that):
+	_asset_manager(that._asset_manager),
+	_current_window(that._current_window),
+	_height(that._height),
+	_width(that._width)
+	{}
+GameWindowManager::GameWindowManager(const GameWindowManager* that):
+	_asset_manager(that->_asset_manager),
+	_current_window(that->_current_window),
+	_height(that->_height),
+	_width(that->_width)
+	{}
+
 void GameWindowManager::setCurrentWindow(
 		const std::shared_ptr<GameWindow>& currentWindow) {
 	_current_window = currentWindow;
 }
 
-const std::shared_ptr<AssetManager>& GameWindow::getAssetManager() const {
-	return _asset_manager;
+const std::shared_ptr<GameWindowManager>& GameWindow::getGameWindowManager() const {
+	return _game_window_manager;
 }
 
-void GameWindow::setAssetManager(
-		const std::shared_ptr<AssetManager>& assetManager) {
-	_asset_manager = assetManager;
+
+unsigned GameWindowManager::getHeight() const {
+	return _height;
+}
+
+unsigned GameWindowManager::getWidth() const {
+	return _width;
 }
